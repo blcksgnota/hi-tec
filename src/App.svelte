@@ -278,7 +278,7 @@
             </section>
         </div>
 
-        <div id="shop" class="shop-wrap">
+        <div id="shop" class="shop-wrap" bind:this={shopWrapper}>
             <div class="section__shop-hero">
                 <div class="padding-global padding-section-large ub-0">
                     <div class="container-large cc-shop">
