@@ -13,7 +13,56 @@ section {
 }
 
 canvas {
+    max-width: 90vw;
     width: 100%;
     height: 100%;
     pointer-events: none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.navbar a {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    position: relative;
+}
+.navbar a.active {
+    color: #EEA141;
+    font-weight: 700;
+}
+
+.navbar a.active:before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #EEA141;
+    bottom: -10px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Default state of the menu items */
+.navbar a {
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+
+/* Styles for navbar links when corresponding sections are dark */
+.navbar a.dark {
+    color: red;/* Your desired color for dark navbar links */;
 }

@@ -25,12 +25,25 @@
 <svelte:head>
     <script async src="https://ga.jspm.io/npm:es-module-shims@1.9.0/dist/es-module-shims.js"></script>
 </svelte:head>
+
+<header>
+    <div class="navbar">
+        <a data-section="HOME" href="#1981" data-theme="dynamic">1981</a>
+        <a data-section="ABOUT" href="#1990" data-theme="dynamic">1990</a>
+        <a data-section="SERVICES" href="#1992" data-theme="dynamic">1992</a>
+        <a data-section="PROJECTS" href="#2007" data-theme="dynamic">2007</a>
+        <a data-section="TEAM" href="#2021" data-theme="dynamic">2001</a>
+        <a data-section="CONTACT" href="#shop" data-theme="dynamic">Shop</a>
+    </div>
+</header>
 <main class="bg-amber-50">
-    <div>
-        <section>
+    <div class="foc_section">
+        <section id="">
             Hero
         </section>
-
+        <section class="w-[200vw] bg-gray-950 text-white">
+            <h1>Text color white and this section is long not just small long but big long</h1>
+        </section>
         <section>
             <h1>1981</h1>
             <canvas id="3d-1981"></canvas>
@@ -53,7 +66,7 @@
 
         <section>
             <h1>2021</h1>
-            <canvas id="3d-2007"></canvas>
+            <canvas id="3d-2021"></canvas>
         </section>
     </div>
 
