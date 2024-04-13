@@ -20,6 +20,7 @@
     "@lottiefiles/svelte-lottie-player": "^0.3.1",
     "@splinetool/loader": "^1.0.94",
     "@splinetool/runtime": "^1.0.94",
+    "@splinetool/viewer": "^1.0.94",
     "gsap": "^3.12.5",
     "lottie-web": "^5.12.2"
   }

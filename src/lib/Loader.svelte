@@ -18,11 +18,11 @@
 
     const customEase = "M0,0,C0,0,0.13,0.34,0.238,0.442,0.305,0.506,0.322,0.514,0.396,0.54,0.478,0.568,0.468,0.56,0.522,0.584,0.572,0.606,0.61,0.719,0.714,0.826,0.798,0.912,1,1,1,1";
     let counter = {value: 0};
-    let loaderDuration = 5;
+    let loaderDuration = 6;
 
     // If not a first time visit in this tab
     if (sessionStorage.getItem("visited") !== null) {
-        loaderDuration = 3;
+        loaderDuration = 4;
         counter = {value: 75};
     }
     sessionStorage.setItem("visited", "true");
@@ -42,12 +42,13 @@
         });
 
         gsap.to(loaderContainer, {
-            y: '150%',
-            duration: 2,
-            opacity: 0,
+            y: '100%',
+            duration: 0.8,
+            // opacity: 0,
             delay: 1.25,
-            ease: CustomEase.create("custom", customEase),
+            // ease: CustomEase.create("custom", customEase),
             onComplete: () => {
+                loaderContainer.style.opacity = 0;
                 loaderContainer.style.display = "none";
             }
         });
@@ -90,7 +91,7 @@
             gsap.fromTo(
                 lottieContainer,
                 {scale: 1.5, opacity: 0},
-                {scale: 1, opacity: 1, duration: 1.2, delay: 0.8}
+                {scale: 1, opacity: 1, duration: 1.2, delay: 0.25}
             );
 
             // Stop the animation after loaderDuration seconds
