@@ -197,8 +197,8 @@
 </script>
 
 <svelte:head>
-    <link href="https://assets-global.website-files.com/65e6ea25b58cfc23004a325a/css/hi-tec-staging.webflow.f0266fd4f.css"
-          rel="stylesheet" type="text/css">
+<!--    <link href="https://assets-global.website-files.com/65e6ea25b58cfc23004a325a/css/hi-tec-staging.webflow.f0266fd4f.css"-->
+<!--          rel="stylesheet" type="text/css">-->
     <script async src="https://ga.jspm.io/npm:es-module-shims@1.9.0/dist/es-module-shims.js"></script>
 </svelte:head>
 
@@ -216,12 +216,12 @@
 </header>
 <!--    <Loader />-->
 <div class="page-wrapper">
-        <div class="foc_container" bind:this={foc_container}>
+        <div class="foc_container flex flex-row flex-nowrap" bind:this={foc_container}>
             <section id="" class="section_hero hero">
                 Hero
             </section>
 
-            <section class="w-[200vw] bg-gray-950 text-white section_track">
+            <section class="w-[200vw] shrink-0 bg-gray-950 text-white section_track">
                 <h1>Text color white and this section is long not just small long but big long</h1>
             </section>
 
@@ -232,7 +232,7 @@
                 </div>
             </section>
 
-            <section class="w-[200vw] bg-gray-950 text-white section_track">
+            <section class="w-[200vw] shrink-0 bg-gray-950 text-white section_track">
                 <h1>Text color white and this section is long not just small long but big long</h1>
             </section>
 
@@ -243,7 +243,7 @@
                 </div>
             </section>
 
-            <section class="w-[200vw] bg-gray-950 text-white section_track">
+            <section class="w-[200vw] shrink-0 bg-gray-950 text-white section_track">
                 <h1>Text color white and this section is long not just small long but big long</h1>
             </section>
 
@@ -254,7 +254,7 @@
                 </div>
             </section>
 
-            <section class="w-[200vw] bg-gray-950 text-white section_track">
+            <section class="w-[200vw] shrink-0 bg-gray-950 text-white section_track">
                 <h1>Text color white and this section is long not just small long but big long</h1>
             </section>
 
@@ -266,7 +266,7 @@
 
             </section>
 
-            <section class="w-[200vw] bg-gray-950 text-white section_track">
+            <section class="w-[200vw] shrink-0 bg-gray-950 text-white section_track">
                 <h1>Text color white and this section is long not just small long but big long</h1>
             </section>
 
