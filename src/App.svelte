@@ -213,7 +213,7 @@
     </div>
 </header>
 <main class="bg-amber-50 overflow-clip">
-    <Loader />
+<!--    <Loader />-->
     <div class="foc_container" bind:this={foc_container}>
         <section id="" class="section_hero hero">
             Hero
@@ -225,7 +225,9 @@
 
         <section id="1981" class="section_hero">
             <h1>1981</h1>
-            <canvas id="3d-1981"></canvas>
+            <div width="100%" height="100%">
+                <canvas id="3d-1981"></canvas>
+            </div>
         </section>
 
         <section class="w-[200vw] bg-gray-950 text-white section_track">
