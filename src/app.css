@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --main-color: #494949;
+}
 section {
     min-height: 100vh;
     display: flex;
@@ -33,7 +36,7 @@ canvas {
     font-size: 16px;
     line-height: 150%;
     text-align: center;
-    color: #000;
+    color: var(--main-color);
     text-decoration: none;
     text-transform: uppercase;
     position: relative;
@@ -65,4 +68,15 @@ canvas {
 /* Styles for navbar links when corresponding sections are dark */
 .navbar a.dark {
     color: red;/* Your desired color for dark navbar links */;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    z-index: 9999;
+    justify-content: space-between;
+    padding: 32px;
 }
