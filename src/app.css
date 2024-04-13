@@ -50,14 +50,6 @@ canvas {
     pointer-events: none !important;
 }
 
-.navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
-}
-
-
 
 header {
     position: fixed;
@@ -71,6 +63,9 @@ header {
     padding: 32px;
 }
 
+.navbar_link{
+    color: var(--main-color);
+}
 .navbar_link .bracket {
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -101,4 +96,39 @@ header {
 
 .page-wrapper {
     overflow: clip;
+}
+
+@keyframes slideX {
+    0%, 100% {
+        transform: translateX(185px);
+    }
+    50% {
+        transform: translateX(calc(100vw - 9px - 185px));
+    }
+}
+
+@keyframes slideY {
+    0%, 100% {
+        transform: translateY(185px);
+    }
+    50% {
+        transform: translateY(calc(100vh - 9px - 185px));
+    }
+}
+
+
+.loader_track-marker.top {
+    animation: slideX 30s infinite ease-in-out;
+}
+
+.loader_track-marker.bottom {
+    animation: slideX 20s infinite ease-in-out;
+}
+
+.loader_track-marker.left {
+    animation: slideY 30s infinite ease-in-out;
+}
+
+.loader_track-marker.right {
+    animation: slideY 20s infinite ease-in-out;
 }
