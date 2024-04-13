@@ -216,7 +216,7 @@
 </header>
 <!--    <Loader />-->
 <div class="page-wrapper">
-        <div class="foc_container flex flex-row flex-nowrap" bind:this={foc_container}>
+        <div class="foc_container flex flex-col md:flex-row flex-nowrap" bind:this={foc_container}>
             <section id="" class="section_hero hero">
                 Hero
             </section>
