@@ -29,54 +29,25 @@ canvas {
     gap: 16px;
 }
 
-.navbar a {
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 150%;
-    text-align: center;
-    color: var(--main-color);
-    text-decoration: none;
-    text-transform: uppercase;
-    position: relative;
-}
-.navbar a.active {
-    color: #EEA141;
-    font-weight: 700;
-}
-
-.navbar a.active:before{
-    content: "";
-    display: block;
-    position: absolute;
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background: #EEA141;
-    bottom: -10px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-/* Default state of the menu items */
-.navbar a {
-    transition: color 0.3s ease; /* Smooth transition for color change */
-}
 
 
-/* Styles for navbar links when corresponding sections are dark */
-.navbar a.dark {
-    color: red;/* Your desired color for dark navbar links */;
-}
-
-header{
+header {
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
     display: flex;
     z-index: 9999;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     padding: 32px;
+}
+
+.navbar_link .bracket {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.navbar_link .bracket.active {
+    opacity: 1;
 }

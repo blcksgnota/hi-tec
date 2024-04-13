@@ -5,13 +5,14 @@
     import { gsap } from "gsap";
     import { ScrollTrigger } from "gsap/ScrollTrigger";
     import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+    import { activeSection } from './store.js'
+    import Loader from "./lib/Loader.svelte";
 
-    let canvas;
-    let scale;
     let foc_container;
     let shopWrapper;
     let shopLink;
     let twenty21Link;
+    let menuRefs = {};
 
     const splines = [
         { id: '3d-1981', url: 'https://prod.spline.design/72BmcF8KyGZm6gPr/scene.splinecode' },
@@ -79,9 +80,8 @@
 
             // Create a ScrollTrigger for each section
             foc_sections.forEach((section, i) => {
-                let relatedLink = document.querySelector(
-                    `.navbar a[href="#${section.id}"]`,
-                );
+                let relatedLink = menuRefs[section.id];
+
                 ScrollTrigger.create({
                     trigger: section,
                     start: "left center",
@@ -89,6 +89,7 @@
                     containerAnimation: scrollTween,
                     onToggle: (self) => {
                         if (self.isActive) {
+                            activeSection.set(section.id);
                             if (relatedLink) {
                                 navbarLinks.forEach((link) => {
                                     link.classList.remove("active");
@@ -118,16 +119,14 @@
                 end: "bottom center",
                 onToggle: (self) => {
                     if (self.isActive) {
-                        navbarLinks.forEach((link) => link.classList.remove("active"));
-                        shopLink?.classList?.add("active");
+                        activeSection.set("shop");
                         toggleColor("#494949");
                         currentView = "shop";
                     }
                 },
                 onLeaveBack: () => {
                     currentView = "";
-                    navbarLinks.forEach((link) => link.classList.remove("active"));
-                    twenty21Link?.classList?.add("active");
+                    activeSection.set("2021");
                     toggleColor("#494949");
                 },
             });
@@ -204,65 +203,66 @@
 <header>
     <div class="navbar_menu">
         {#each menuItems as item}
-            <a data-section={item.section} href="#{item.section}" data-theme="dynamic" class="navbar_link w-inline-block">
-                <span class="bracket">[</span>
+            <a bind:this={menuRefs[item.section]} data-section={item.section} href="#{item.section}" data-theme="dynamic" class="navbar_link w-inline-block">
+                <span class="bracket" class:active={$activeSection === item.section}>[</span>
                 <span>{item.text}</span>
-                <span class="bracket">]</span>
+                <span class="bracket" class:active={$activeSection === item.section}>]</span>
             </a>
         {/each}
     </div>
 </header>
 <main class="bg-amber-50 overflow-clip">
-    <div class="foc_container" bind:this={foc_container}>
-        <section id="" class="section_hero hero">
-            Hero
-        </section>
+    <Loader />
+<!--    <div class="foc_container" bind:this={foc_container}>-->
+<!--        <section id="" class="section_hero hero">-->
+<!--            Hero-->
+<!--        </section>-->
 
-        <section class="w-[200vw] bg-gray-950 text-white section_track">
-            <h1>Text color white and this section is long not just small long but big long</h1>
-        </section>
+<!--        <section class="w-[200vw] bg-gray-950 text-white section_track">-->
+<!--            <h1>Text color white and this section is long not just small long but big long</h1>-->
+<!--        </section>-->
 
-        <section id="1981" class="section_hero">
-            <h1>1981</h1>
-            <canvas id="3d-1981"></canvas>
-        </section>
+<!--        <section id="1981" class="section_hero">-->
+<!--            <h1>1981</h1>-->
+<!--            <canvas id="3d-1981"></canvas>-->
+<!--        </section>-->
 
-        <section class="w-[200vw] bg-gray-950 text-white section_track">
-            <h1>Text color white and this section is long not just small long but big long</h1>
-        </section>
+<!--        <section class="w-[200vw] bg-gray-950 text-white section_track">-->
+<!--            <h1>Text color white and this section is long not just small long but big long</h1>-->
+<!--        </section>-->
 
-        <section id="1990" class="section_hero">
-            <h1>1990</h1>
-            <canvas id="3d-1990"></canvas>
-        </section>
+<!--        <section id="1990" class="section_hero">-->
+<!--            <h1>1990</h1>-->
+<!--            <canvas id="3d-1990"></canvas>-->
+<!--        </section>-->
 
-        <section class="w-[200vw] bg-gray-950 text-white section_track">
-            <h1>Text color white and this section is long not just small long but big long</h1>
-        </section>
+<!--        <section class="w-[200vw] bg-gray-950 text-white section_track">-->
+<!--            <h1>Text color white and this section is long not just small long but big long</h1>-->
+<!--        </section>-->
 
-        <section id="1992" class="section_hero">
-            <h1>1992</h1>
-            <canvas id="3d-1992"></canvas>
-        </section>
+<!--        <section id="1992" class="section_hero">-->
+<!--            <h1>1992</h1>-->
+<!--            <canvas id="3d-1992"></canvas>-->
+<!--        </section>-->
 
-        <section class="w-[200vw] bg-gray-950 text-white section_track">
-            <h1>Text color white and this section is long not just small long but big long</h1>
-        </section>
+<!--        <section class="w-[200vw] bg-gray-950 text-white section_track">-->
+<!--            <h1>Text color white and this section is long not just small long but big long</h1>-->
+<!--        </section>-->
 
-        <section id="2007" class="section_hero">
-            <h1>2007</h1>
-            <canvas id="3d-2007"></canvas>
-        </section>
+<!--        <section id="2007" class="section_hero">-->
+<!--            <h1>2007</h1>-->
+<!--            <canvas id="3d-2007"></canvas>-->
+<!--        </section>-->
 
-        <section class="w-[200vw] bg-gray-950 text-white section_track">
-            <h1>Text color white and this section is long not just small long but big long</h1>
-        </section>
+<!--        <section class="w-[200vw] bg-gray-950 text-white section_track">-->
+<!--            <h1>Text color white and this section is long not just small long but big long</h1>-->
+<!--        </section>-->
 
-        <section id="2021" class="section_hero">
-            <h1>2021</h1>
-            <canvas id="3d-2021"></canvas>
-        </section>
-    </div>
+<!--        <section id="2021" class="section_hero">-->
+<!--            <h1>2021</h1>-->
+<!--            <canvas id="3d-2021"></canvas>-->
+<!--        </section>-->
+<!--    </div>-->
 
     <section id="shop" class="bg-white h-[500vh] justify-start" bind:this={shopWrapper}>
         Shop
