@@ -6,6 +6,7 @@ html {
 
 body {
     margin: 0;
+    overflow-clip: clip;
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
@@ -2712,9 +2713,16 @@ figcaption {
     line-height: 1.1;
 }
 
+.heading-style-h1.text-align-center {
+}
+
+.heading-style-h1.text-align-center {
+    text-wrap: balance;
+}
+
 .padding-global {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
+    padding-left: 3.5%;
+    padding-right: 3.5%;
 }
 
 .padding-global.padding-section-large.ub-0 {
@@ -3160,7 +3168,7 @@ figcaption {
 }
 
 .text-size-medium {
-    font-size: 1.125rem;
+    font-size: 1.0625rem;
 }
 
 .fs-styleguide_section {
@@ -3999,7 +4007,7 @@ figcaption {
 
 .d-section {
     flex: none;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     display: flex;
     position: relative;
@@ -4040,7 +4048,6 @@ figcaption {
     width: 100vw;
     height: 100%;
     position: relative;
-    overflow: hidden;
 }
 
 .panel.is-full {
@@ -4051,7 +4058,7 @@ figcaption {
 }
 
 .panel.is-wide {
-    width: 100vw;
+    width: 105vw;
 }
 
 .section {
@@ -4677,8 +4684,10 @@ figcaption {
     justify-content: center;
     align-items: center;
     width: 100%;
+    min-width: 50rem;
     display: flex;
     position: relative;
+    z-index: 1;
 }
 
 .peak__boot-img {
@@ -4719,7 +4728,7 @@ figcaption {
 .peak__news-graph {
     width: 20rem;
     position: absolute;
-    top: 0%;
+    top: -35%;
     bottom: auto;
     left: auto;
     right: 0%;
@@ -4738,6 +4747,7 @@ figcaption {
     grid-row-gap: .5rem;
     flex-flow: column;
     margin-left: 5vw;
+    margin-top: 10vh;
     display: flex;
 }
 
@@ -4750,9 +4760,10 @@ figcaption {
 }
 
 .peak__adrian-graph {
-    width: 50%;
+    width: 62%;
     position: absolute;
     right: 25%;
+    bottom: 12%;
 }
 
 .race__content {
@@ -4817,6 +4828,7 @@ figcaption {
 .race__img-container {
     width: 37.5rem;
     margin-left: auto;
+    margin-right: 10%;
     position: relative;
 }
 
@@ -4883,7 +4895,7 @@ figcaption {
     top: 3rem;
     bottom: auto;
     left: auto;
-    right: 0%;
+    right: -12%;
 }
 
 .race__runner-wrap {
@@ -4899,7 +4911,7 @@ figcaption {
 .race__runner-img {
     border: 1px solid #fff;
     width: 600px;
-    max-width: none;
+    max-width: 34vw;
 }
 
 .race__runners-img {
@@ -4908,9 +4920,9 @@ figcaption {
     width: 18rem;
     position: absolute;
     top: auto;
-    bottom: -80%;
+    bottom: -65%;
     left: auto;
-    right: -25%;
+    right: -10%;
 }
 
 .nick__content {
@@ -4981,12 +4993,19 @@ figcaption {
 
 .nick__shoe-wrap {
     width: 100%;
+    max-width: 52rem;
     position: relative;
+}
+
+.nick__shoe-wrap img {
+    position: relative;
+    z-index: 1;
 }
 
 .nick__shoe-img {
     z-index: 1;
-    width: 53.5rem;
+    width: 100%;
+    max-width: 53.5rem;
     position: relative;
 }
 
@@ -5023,9 +5042,9 @@ figcaption {
 }
 
 .nick__history {
-    width: 108px;
+    width: 90px;
     position: absolute;
-    top: 7rem;
+    top: 6rem;
     right: 0;
 }
 
@@ -5035,6 +5054,7 @@ figcaption {
     height: 31vh;
     display: flex;
     position: relative;
+    transform: translateX(-30%);
 }
 
 .nick__tenis {
@@ -5050,10 +5070,10 @@ figcaption {
     z-index: 0;
     outline-offset: 0px;
     outline: 1px solid #fff;
-    width: 560px;
+    width: 37.5rem;
     max-width: 200%;
     position: absolute;
-    top: -100%;
+    top: -140%;
     left: -20rem;
 }
 
@@ -5241,11 +5261,13 @@ figcaption {
 }
 
 .section_track {
+    padding-top: 4rem;
     background-color: #121212;
     flex: none;
     justify-content: flex-start;
     align-items: center;
-    width: 200vw;
+    width: 210vw;
+    max-width: 216rem;
     height: 100vh;
     max-height: 100dvh;
     display: flex;
@@ -5315,6 +5337,7 @@ figcaption {
 
 .original__images {
     width: 37.5rem;
+    max-width: 34.25vw;
     margin-top: .5rem;
     position: relative;
 }
@@ -5374,6 +5397,7 @@ figcaption {
 .original__shoe-wrap {
     width: 100%;
     position: relative;
+    max-width: 56rem;
 }
 
 .original__shoe-year {
@@ -5404,17 +5428,20 @@ figcaption {
     top: 3rem;
     bottom: auto;
     left: auto;
-    right: 0%;
+    right: 0;
 }
 
 .original__frank-wrap {
     grid-column-gap: .5rem;
     grid-row-gap: .5rem;
     flex-flow: column;
-    width: 28.5rem;
+    width: 27.5rem;
+    max-width: 25vw;
     margin-left: auto;
-    margin-right: calc(10% + 1.5rem);
+    margin-right: calc(2% + 1.5rem);
     display: flex;
+    align-items: start;
+    justify-content: end;
 }
 
 .original__frank-img {
@@ -5425,7 +5452,7 @@ figcaption {
     width: 7.75rem;
     position: absolute;
     top: auto;
-    bottom: 7rem;
+    bottom: 1rem;
     left: auto;
     right: 0%;
 }
@@ -5499,7 +5526,7 @@ figcaption {
 .hero__spline-wrap.spline {
     pointer-events: none;
     width: 150%;
-    margin-top: -20vh;
+    margin-top: -15vh;
 }
 
 .hero__spline-placeholder {
@@ -5981,36 +6008,6 @@ figcaption {
     display: flex;
 }
 
-.panel1 {
-    background-image: url("https://assets-global.website-files.com/65e6ea25b58cfc23004a325a/6603ed94e4c09d6878534495_and-machines-mAiFQrt9xMc-unsplash.jpg");
-    background-position: 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    flex: none;
-    width: 100vw;
-    height: 100%;
-}
-
-.panel2 {
-    background-image: url("https://assets-global.website-files.com/65e6ea25b58cfc23004a325a/6603ed94e4c09d6878534489_and-machines-SZd_V4A8gYo-unsplash.jpg");
-    background-position: 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    flex: none;
-    width: 100vw;
-    height: 100%;
-}
-
-.panel3 {
-    background-image: url("https://assets-global.website-files.com/65e6ea25b58cfc23004a325a/6603ed94e4c09d687853448f_and-machines-odNU0f3jmUg-unsplash.jpg");
-    background-position: 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    flex: none;
-    width: 80vw;
-    height: 100%;
-}
-
 .shop-wrap {
     background-color: #fff;
     width: 100%;
@@ -6085,25 +6082,6 @@ figcaption {
     overflow: hidden;
 }
 
-.panel4 {
-    background-image: url("https://assets-global.website-files.com/65e6ea25b58cfc23004a325a/660e4f286038e338f77f3ab0_and-machines-YLplJ9m_RKE-unsplash.jpg");
-    background-position: 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    flex: none;
-    width: 130vh;
-    height: 100%;
-}
-
-.panel5 {
-    background-image: url("https://assets-global.website-files.com/65e6ea25b58cfc23004a325a/660e4f286038e338f77f3ab6_and-machines-vqTWfa4DjEk-unsplash.jpg");
-    background-position: 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    flex: none;
-    width: 50vw;
-    height: 100%;
-}
 
 .menu__col {
     flex: 1;
@@ -6116,13 +6094,14 @@ figcaption {
     flex-flow: row;
     height: 100%;
     display: flex;
+    flex-wrap: nowrap;
 }
 
 .d-section-divider {
     z-index: 0;
     opacity: .15;
     background-color: #fff;
-    width: 100%;
+    width: 150%;
     height: 1px;
     position: absolute;
     top: 50%;
@@ -6135,7 +6114,7 @@ figcaption {
     width: 100%;
     height: 1px;
     position: absolute;
-    top: 41vh;
+    top: 42vh;
 }
 
 @media screen and (max-width: 991px) {
@@ -6616,10 +6595,12 @@ figcaption {
 
     .peak__boot-wrap {
         aspect-ratio: 1;
+        width: 100%;
+        min-width: 100%;
     }
 
     .peak__boot-img {
-        width: 80%;
+        width: 85%;
     }
 
     .peak__boot-tag {
@@ -6787,6 +6768,7 @@ figcaption {
     .nick__tenis-wrap {
         aspect-ratio: 1;
         width: 100%;
+        transform: translateX(0%);
     }
 
     .nick__tenis {
@@ -6832,6 +6814,7 @@ figcaption {
     }
 
     .section_track {
+        padding-top: 0;
         flex-flow: column;
         width: 100%;
         height: auto;
@@ -6873,6 +6856,7 @@ figcaption {
 
     .original__frank-wrap {
         width: 100%;
+        max-width: 100%;
     }
 
     .hero__first-image_wrap, .hero__date-wrap {
@@ -7619,6 +7603,7 @@ figcaption {
 
     .race__runner-img {
         width: 100%;
+        max-width: none;
     }
 
     .shop__hero-content {
@@ -7660,6 +7645,7 @@ figcaption {
     }
 
     .section_track {
+        padding-top: 0;
         width: 100%;
         height: auto;
         max-height: none;
@@ -7689,7 +7675,7 @@ figcaption {
         margin-right: auto;
         position: absolute;
         top: 50%;
-        left: 55%;
+        left: 60%;
         transform: translate(-50%, -50%);
     }
 
@@ -7717,7 +7703,7 @@ figcaption {
         flex-flow: column;
         justify-content: flex-end;
         align-items: flex-start;
-        min-height: 24rem;
+        min-height: 16rem;
         display: flex;
         position: relative;
     }
@@ -8172,6 +8158,7 @@ figcaption {
     }
 
     .section_track {
+        padding-top: 0;
         width: 100%;
     }
 
@@ -8181,6 +8168,7 @@ figcaption {
 
     .original__images {
         width: 65%;
+        max-width: 65%;
     }
 
     .original__compas {

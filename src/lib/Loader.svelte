@@ -16,6 +16,7 @@
 
 
     gsap.registerPlugin(CustomEase);
+
     function bindLoaderEl(node) {
         loaderEls = [...loaderEls, node];
     }
