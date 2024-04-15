@@ -8,10 +8,31 @@
     export let headline;
     export let subheadline;
 
+    let desktopRef, mobileRef; // two different refs for desktop and mobile
+    let app; // to hold the application instance
+
+    // Reactive statement to check if the device is mobile
+    let isMobile = window.innerWidth < 768; // Example threshold for mobile
+
+    function isMobileDevice() {
+        return window.innerWidth < 768; // Example breakpoint for mobile detection
+    }
+
     onMount(() => {
+        const isMobile = isMobileDevice();
+        const canvasRef = isMobile ? mobileRef : desktopRef; // Choose the ref based on device type
+        const sceneURL = `/splines/${year}/scene.splinecode`; // Uniform URL for all devices
+
         const app = new Application(canvasRef);
-        app.load(`/splines/${year}/scene.splinecode`);
+        app.load(sceneURL).catch(error => {
+            console.error("Failed to load the scene:", error);
+        });
     });
+
+    // onMount(() => {
+    //     const app = new Application(canvasRef);
+    //     app.load(`/splines/${year}/scene.splinecode`);
+    // });
 
 </script>
 
@@ -49,7 +70,7 @@
                         </div>
                         <div class="hero__spline-wrap spline">
                             <div class="hero__spline-placeholder spline">
-                                <canvas bind:this={canvasRef} id={`3d-${year}`} style="display: block; width: 100%; height: 100%;"></canvas>
+                                <canvas bind:this={desktopRef} id={`3d-${year}`} style="display: block; width: 100%; height: 100%;"></canvas>
                             </div>
                         </div>
                     </div>
@@ -101,7 +122,7 @@
                 </div>
                 <div class="m-hero__spline-wrap">
                     <div class="hero__spline-placeholder spline">
-                        <canvas bind:this={canvasRef} id={`3d-${year}`} style="display: block; width: 100%; height: 100%;"></canvas>
+                        <canvas bind:this={mobileRef} id={`3d-${year}`} style="display: block; width: 100%; height: 100%;"></canvas>
                     </div>
                     <div class="m-hero__year-wrap">
                         <div data-w-id="f9720988-5e6e-2b43-8298-2be51d7de46e" class="hero_date-wrap desktop">
