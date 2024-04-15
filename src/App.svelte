@@ -71,69 +71,14 @@
         {section: "shop", text: "Shop New Range"},
     ];
 
-    // function loadSpline(canvasId, splineUrl) {
-    //     const canvas = document.getElementById(canvasId);
-    //     const app = new Application(canvas);
-    //     app.load(splineUrl);
-    // }
-
-    let loadedScenes = [];
-
-    function loadSpline(canvasId, splineUrl, objectName) {
+    function loadSpline(canvasId, splineUrl) {
         const canvas = document.getElementById(canvasId);
         const app = new Application(canvas);
-
-        return new Promise((resolve, reject) => {
-            app.load(splineUrl)
-                .then((loadedScene) => {
-                    const splineLoaded = () => {
-                        const object = app.scene.findObjectByName(objectName);
-
-                        if (object) {
-                            canvas.addEventListener('mousemove', (event) => {
-                                const canvasRect = canvas.getBoundingClientRect();
-                                const mouseX = event.clientX - canvasRect.left;
-                                const canvasWidth = canvasRect.width;
-                                const mousePercentage = (mouseX / canvasWidth) * 2 - 1; // Range: -1 to 1
-
-                                const rotationY = mousePercentage * 2; // Adjust the multiplier as needed
-                                const rotationZ = 0;
-
-                                object.rotation.y = rotationY;
-                                object.rotation.z = rotationZ;
-                            });
-
-                            loadedScenes = [...loadedScenes, loadedScene];
-                            resolve();
-                        } else {
-                            console.warn(`Object "${objectName}" not found in the spline.`);
-                            reject(`Object "${objectName}" not found in the spline.`);
-                        }
-                    };
-
-                    if (app.scene) {
-                        splineLoaded();
-                    } else {
-                        app.addEventListener('load', splineLoaded);
-                    }
-                })
-                .catch((error) => {
-                    console.error('Error loading spline:', error);
-                    reject(error);
-                });
-        });
+        app.load(splineUrl);
     }
 
-
     onMount(() => {
-        // Promise.all(splines.map(({ id, url, objectName }) => loadSpline(id, url, objectName)))
-        //     .then(() => {
-        //         console.log('All splines loaded:', loadedScenes);
-        //     })
-        //     .catch((error) => {
-        //         console.error('Error loading splines:', error);
-        //     });
-        // splines.forEach(({id, url}) => loadSpline(id, url));
+        splines.forEach(({id, url}) => loadSpline(id, url));
 
         const root_theme = document.querySelector(":root");
         const sections = document.querySelectorAll(".section_track");
