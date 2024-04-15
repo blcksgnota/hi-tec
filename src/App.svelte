@@ -234,7 +234,6 @@
         }
     });
 
-    console.log($activeSection);
 </script>
 
 <svelte:head>
@@ -245,7 +244,7 @@
 </svelte:head>
 
 <Navbar {menuItems} {menuRefs}/>
-<!--<Loader/>-->
+<Loader/>
 <div class="page-wrapper">
     <div class="foc_container flex flex-col md:flex-row flex-nowrap" bind:this={foc_container}>
         <Landing/>
