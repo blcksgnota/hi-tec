@@ -139,8 +139,7 @@
                             </div>
                             <div class="shop__squash-og-wrap">
                                 <img class="shop__squash-og" src="/img/shop/2024-squash.webp" width="608" alt="">
-                                <div data-w-id="505dca30-d67a-38d4-7ac5-8ccce12f1e06" class="image_title"
-                                     style="transform: translate3d(0%, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; opacity: 1;">
+                                <div data-w-id="505dca30-d67a-38d4-7ac5-8ccce12f1e06" class="image_title">
                                     <div class="title_highlight"></div>
                                     <div class="text-size-small">2024 HI-TEC® SQUAsh OG</div>
                                 </div>
@@ -149,13 +148,12 @@
                     </div>
                 </div>
                 <div class="row wide">
-                    <div class="col wide col-lg-20"><img
-                            src="https://assets-global.website-files.com/65e6ea25b58cfc23004a325a/66017f85a6a116cf55d8bba3_2024-pct__.webp"
+                    <div class="col wide col-lg-20">
+                        <img
+                            src="/img/shop/2024-pct.webp"
                             loading="lazy" width="1480"
-                            style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
                             alt="" data-w-id="9e7b78b1-910a-1f68-5613-9227359642ba" class="shop__pct">
-                        <div data-w-id="505dca30-d67a-38d4-7ac5-8ccce12f1e06" class="image_title"
-                             style="transform: translate3d(0%, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; opacity: 1;">
+                        <div data-w-id="505dca30-d67a-38d4-7ac5-8ccce12f1e06" class="image_title">
                             <div class="title_highlight"></div>
                             <div class="text-size-small">2024 HI-TEC® PCT</div>
                         </div>
@@ -170,7 +168,6 @@
                 <div class="shop-cta__container">
                     <div class="shop-cta__wrap">
                         <svg data-w-id="9e7b78b1-910a-1f68-5613-9227359642c2"
-                             style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
                              class="shop-cta__years" xmlns="http://www.w3.org/2000/svg" width="100%"
                              viewBox="0 0 169 32" fill="none">
                             <g clip-path="url(#clip0_2149_1752)">
@@ -199,7 +196,6 @@
                             </defs>
                         </svg>
                         <h1 data-w-id="9e7b78b1-910a-1f68-5613-9227359642cf"
-                            style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
                             class="heading-style-h1 text-align-center">SHOP THE 2024 RANGE, &amp; RUN THROUGH TIME.</h1>
                         <a href="https://hi-tec.co.za/original_since_74/"
                            class="button is-brand shop__cta-years w-button">BUY NOW</a></div>

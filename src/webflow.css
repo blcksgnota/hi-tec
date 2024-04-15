@@ -2711,6 +2711,7 @@ figcaption {
     text-transform: uppercase;
     font-size: 7.5vh;
     line-height: 1.1;
+    line-height: 1.1;
 }
 
 .heading-style-h1.text-align-center {
@@ -5264,7 +5265,7 @@ figcaption {
     padding-top: 4rem;
     background-color: #121212;
     flex: none;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     width: 210vw;
     max-width: 216rem;
@@ -8125,6 +8126,7 @@ figcaption {
 
     .shop__hero-original {
         width: 148px;
+        top: -20%;
     }
 
     .shop__hero-img-wrap {
@@ -8330,6 +8332,7 @@ figcaption {
 
     .shop__hero-tag.cc-mobile {
         width: 92px;
+        top: -20%;
     }
 
     .shop-wrap {
