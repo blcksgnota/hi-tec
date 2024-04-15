@@ -113,25 +113,25 @@
             ease: CustomEase.create("custom", customEase)
         });
 
-
-        function handleResize() {
-            if (window.innerWidth !== lastWindowWidth || window.innerHeight !== lastWindowHeight) {
-                lastWindowWidth = window.innerWidth;
-                lastWindowHeight = window.innerHeight;
-                replayAnimations();
-            }
-        }
-
-// Listen for the resize event with debounce
-        window.addEventListener("resize", () => {
-            clearTimeout(resizeTimeout);
-            resizeTimeout = setTimeout(handleResize, 200);
-        });
-
-// Clean up the event listener on component destruction
-        return () => {
-            window.removeEventListener("resize", handleResize);
-        };
+//
+//         function handleResize() {
+//             if (window.innerWidth !== lastWindowWidth || window.innerHeight !== lastWindowHeight) {
+//                 lastWindowWidth = window.innerWidth;
+//                 lastWindowHeight = window.innerHeight;
+//                 replayAnimations();
+//             }
+//         }
+//
+// // Listen for the resize event with debounce
+//         window.addEventListener("resize", () => {
+//             clearTimeout(resizeTimeout);
+//             resizeTimeout = setTimeout(handleResize, 200);
+//         });
+//
+// // Clean up the event listener on component destruction
+//         return () => {
+//             window.removeEventListener("resize", handleResize);
+//         };
     });
 </script>
 
