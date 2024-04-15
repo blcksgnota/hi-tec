@@ -101,7 +101,7 @@
                 </div>
                 <div class="m-hero__spline-wrap">
                     <div class="hero__spline-placeholder spline">
-<!--                        <canvas bind:this={canvasRef} id={`3d-${year}`} style="display: block; width: 100%; height: 100%;"></canvas>-->
+                        <canvas bind:this={canvasRef} id={`3d-${year}`} style="display: block; width: 100%; height: 100%;"></canvas>
                     </div>
                     <div class="m-hero__year-wrap">
                         <div data-w-id="f9720988-5e6e-2b43-8298-2be51d7de46e" class="hero_date-wrap desktop">
